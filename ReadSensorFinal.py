@@ -50,7 +50,7 @@ else:
     sys.exit(1)
 
 def connectMongo():
-  connection = pymongo.MongoClient("WEBSITE")
+  connection = pymongo.MongoClient("mongodb://<dbuser>:<dbpassword>@ds019746.mlab.com:19746/qpfallteam7")
   db = connection.qpdemo
   return db
 
