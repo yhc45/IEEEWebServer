@@ -29,8 +29,8 @@ def main():
       humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
       temperature = temperature * 9/5.0 + 32
 
-          hum_final = {'time': dts, 'val': humidity, 'num': entry_num_hum }
-          temp_final = {'time': dts, 'val': temperature, 'num': entry_num_temp }
+      hum_final = {'time': dts, 'val': humidity, 'num': entry_num_hum }
+      temp_final = {'time': dts, 'val': temperature, 'num': entry_num_temp }
   
       hums.insert_one(hum_final)
       temps.insert_one(temp_final)
