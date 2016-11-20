@@ -84,27 +84,18 @@
     <body>
         <h1>Hello World!</h1>
         <p>We are measuring the Hazards of a room, Be Careful!</p>
-        <button onclick="message()">Click me!</button>
-        
-        <table>
-          <tr>
-            <th>Humidity</th>
-            <th>Temperature</th>
-            <th>Noise</th>
-          </tr>
-          <tr>
-            <td>Humidity input</td>
-            <td>Temp input</td>
-            <td>Noise Input</td>
-          </tr>
-        </table>
         
         <ul>    <!-- navigation BAR!!! -->
           <li><a class="active" href="#home">Home</a></li>
-          <li><a href="#data">Data</a></li>
+          <li><a href="#Humidity.php">Data</a></li>
           <li><a href="#charts">Charts</a></li>
           <li><a href="#about">About</a></li>
         </ul>
+
+        <button onclick="message()">Click me!</button>
+        
+        
+        
         
         
     </body>
