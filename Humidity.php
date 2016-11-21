@@ -20,7 +20,7 @@
     include "navbar.html";
 	  echo "</div>";
     function connectMongo() {
-		  $connection = new MongoClient("mongodb://admin:admin@ds019926.mlab.com:19926/qpdemo");
+		  $connection = new MongoClient("mongodb://<dbuser>:<dbpassword>@ds019746.mlab.com:19746/qpfallteam7");
 		  $database = $connection->qpdemo;
 		  return $database;
 	  }
