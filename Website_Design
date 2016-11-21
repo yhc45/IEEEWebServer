@@ -85,11 +85,10 @@
         <h1>Hello World!</h1>
         <p>We are measuring the Hazards of a room, Be Careful!</p>
         
-        <ul>    <!-- navigation BAR!!! -->
-          <li><a class="active" href="#home">Home</a></li>
+         <ul>    <!-- navigation BAR!!! -->
+          <li><a class="active" href="Index.html">Home</a></li>
           <li><a href="Humidity.php">Data</a></li>
-          <li><a href="#charts">Charts</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="About.html">About</a></li>
         </ul>
 
         <button onclick="message()">Click me!</button>
