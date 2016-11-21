@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html>
+
+<?php
+        function connectMongo() {
+		$connection = new MongoClient("mongodb://<admin>:<admin>@ds019746.mlab.com:19746/qpfallteam7");
+		$database = $connection->qpdemo;
+		return $database;
+	}
+?>
+
+
     <head>
         <title>
             Hazard Level of Environment 
@@ -109,6 +119,32 @@
         <button onclick="message()">Click me!</button>
         
         
+      <p>Mission: Display the data in a table</p>
+	
+	<div class="tbl"> <!-- divs for everything! Look in CSS file to see why -->
+	<table>
+		
+		<tr> <!-- header row -->
+			<td class="header">First</td>
+			<td class="header">Last</td>
+			<td class="header">Username</td>
+		</tr>
+	<?php // fill in the table. Open the for loop, and create html for a table
+				// each iteration.
+		$cursor = $collection->find();
+		foreach ($cursor as $doc) {
+	?>
+		<tr>
+			<td><?php echo $doc['first']; ?></td>
+			<td><?php echo $doc['last']; ?></td>
+			<td><?php echo $doc['username']; ?></td>
+		</tr>
+	<?php // remember to close your for loop!
+		}
+	?>
+	</table>
+	</div> <!-- END TBL --> <!-- this helps keep code clean -->
+
         
         
         
