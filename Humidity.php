@@ -11,8 +11,20 @@
 	
   <title>WeatherBox QP Fall 2016</title>
   <?php
-    include "GLOBAL.php";
+   	date_default_timezone_set('America/Los_Angeles');
+ 
   ?>
+  <?php
+    include "navbar.html";
+	  echo "</div>";
+    function connectMongo() {
+		  $connection = new MongoClient("mongodb://admin:admin@ds019926.mlab.com:19926/qpdemo");
+		  $database = $connection->qpdemo;
+		  return $database;
+	  }
+  ?>
+
+
 </head>
 
 <body class="temperature_container">
