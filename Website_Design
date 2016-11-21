@@ -86,7 +86,7 @@
         <p>We are measuring the Hazards of a room, Be Careful!</p>
         
          <ul>    <!-- navigation BAR!!! -->
-          <li><a class="active" href="Index.html">Home</a></li>
+          <li><a class="active" href="index.html">Home</a></li>
           <li><a href="Humidity.php">Data</a></li>
           <li><a href="About.html">About</a></li>
         </ul>
