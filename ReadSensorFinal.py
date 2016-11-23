@@ -42,7 +42,7 @@ def main():
 
 def connectMongo():
   connection = pymongo.MongoClient("mongodb://<dbuser>:<dbpassword>@ds019746.mlab.com:19746/qpfallteam7")
-  db = connection.qpdemo
+  db = connection.qpfallteam7
   return db
 
 if __name__ == "__main__":
