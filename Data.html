@@ -101,7 +101,31 @@
           <li><a href="About.html">About</a></li>
         </ul>
 
-        
+        <p>Mission: Put data into mlab</p>
+				
+<!-- PROCESSING FROM INPUT -->
+<?php
+	if (isset($_POST['enter_name'])) {
+		$newdata = array( "Entry" => $_POST['Entry'],
+				"Temp" => $_POST['Temp'],
+					"Humidity" => $_POST['Humidity']
+							);
+		$collection -> insert($newdata);
+		echo "Entry successful <br><br>";
+	}
+?>
+
+<!-- HTML FORM FOR INPUT -->
+<form method='post'>
+  
+	First Name: <input type="text" name="Entry"><br>
+	Last Name: <input type="text" name="Temp"><br>
+	Username: <input type="text" name="Humidity"><br>
+	<input type="submit" name="upload"><br><br>
+
+</form>
+
+<hr> <!-- END INPUT> BEGIN OUTPUT -->
         
       <p>Mission: Display the data in a table</p>
 	
@@ -119,9 +143,9 @@
 		foreach ($cursor as $doc) {
 	?>
 		<tr>
-			<td><?php echo $doc['first']; ?></td>
-			<td><?php echo $doc['last']; ?></td>
-			<td><?php echo $doc['username']; ?></td>
+			<td><?php echo $doc['Entry']; ?></td>
+			<td><?php echo $doc['Temp']; ?></td>
+			<td><?php echo $doc['Humidity']; ?></td>
 		</tr>
 	<?php // remember to close your for loop!
 		}
