@@ -100,7 +100,10 @@
           <li><a href="Data.html">Data</a></li>
           <li><a href="About.html">About</a></li>
         </ul>
-
+<?php
+				//include "GLOBAL.php"; // get our global functions and header
+				$collection = connectMongo(); // get collection using global method
+?>
         <p>Mission: Put data into mlab</p>
 				
 <!-- PROCESSING FROM INPUT -->
