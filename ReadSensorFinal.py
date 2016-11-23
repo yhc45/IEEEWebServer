@@ -26,7 +26,7 @@ def main():
       dts = datetime.strftime(dto_pacific,"%Y-%m-%d %H:%M:%S")
 
 
-      humidity, temperature = Adafruit_DHT.read_retry(22, 4)
+      humidity, temperature = Adafruit_DHT.read_retry(11, 4)
       temperature = temperature * 9/5.0 + 32
 
       hum_final = {'time': dts, 'val': humidity, 'num': entry_num_hum }
