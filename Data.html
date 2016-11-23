@@ -3,9 +3,10 @@
 
 <?php
         function connectMongo() {
-		$connection = new MongoClient("mongodb://<admin>:<admin>@ds019746.mlab.com:19746/qpfallteam7");
-		$database = $connection->qpdemo;
-		return $database;
+		$connection = new MongoClient("mongodb://admin:admin@ds019746.mlab.com:19746/qpfallteam7");
+		$db = $connection->qpfallteam7;
+		$collection1 = $db->pro;
+		return $collection1;
 	}
 ?>
 
@@ -44,7 +45,7 @@
                 background-color: #dddddd;
             }
             
-            ul {
+c            ul {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
