@@ -21,7 +21,7 @@
 	  echo "</div>";
     function connectMongo() {
 		  $connection = new MongoClient("mongodb://<dbuser>:<dbpassword>@ds019746.mlab.com:19746/qpfallteam7");
-		  $database = $connection->qpdemo;
+		  $database = $connection->qpfallteam7;
 		  return $database;
 	  }
   ?>
