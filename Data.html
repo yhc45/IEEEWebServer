@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<?php
+        function connectMongo() {
+		$connection = new MongoClient("mongodb://<admin>:<admin>@ds019746.mlab.com:19746/qpfallteam7");
+		$database = $connection->qpdemo;
+		return $database;
+	}
+?>
+
+
+    <head>
+        <title>
+            Hazard Level of Environment 
+        </title>
+        <style>
+            body {
+                font-family: arial,verdana,sans-serif,Georgia, "Times New Roman", Times, serif;
+                color: black;
+                text-align:left;
+                background:#fa8072  <!-- I Chose salmon??  -->
+            }
+            h1 {
+                font-size: 2.5em;
+                font-weight: bold;
+            }
+            h2 {
+            <!-- Can always include more here  -->
+            }
+            
+            
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+            
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover:not(.active) {
+                background-color: #111;
+            }
+
+            .active {
+                background-color: blue;
+            }
+            
+        </style>
+
+        <meta name="keywords" content="HTML, Hazards, Danger, RaspberryPi">
+        <meta name="description" content="This is an IEEE project with a Raspberry Pi to measure hazards of a room.">
+
+        <script type="text/javascript">
+            function determineDanger()
+            {
+            
+            }
+               
+            function message()
+            {
+                alert("Your area is insanely dangerous!!")
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        <p>We are measuring the Hazards of a room, Be Careful!</p>
+        
+         <ul>    <!-- navigation BAR!!! -->
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="Data.html">Data</a></li>
+          <li><a href="About.html">About</a></li>
+        </ul>
+
+        
+        
+      <p>Mission: Display the data in a table</p>
+	
+	<div class="tbl"> <!-- divs for everything! Look in CSS file to see why -->
+	<table>
+		
+		<tr> <!-- header row -->
+			<td class="header">First</td>
+			<td class="header">Last</td>
+			<td class="header">Username</td>
+		</tr>
+	<?php // fill in the table. Open the for loop, and create html for a table
+				// each iteration.
+		$cursor = $collection->find();
+		foreach ($cursor as $doc) {
+	?>
+		<tr>
+			<td><?php echo $doc['first']; ?></td>
+			<td><?php echo $doc['last']; ?></td>
+			<td><?php echo $doc['username']; ?></td>
+		</tr>
+	<?php // remember to close your for loop!
+		}
+	?>
+	</table>
+	</div> <!-- END TBL --> <!-- this helps keep code clean -->
+
+        
+        
+        
+    </body>
+</html>
