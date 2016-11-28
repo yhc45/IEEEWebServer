@@ -36,10 +36,22 @@
 			exec( "gpio -g write ". $this->get_gpio_pin() ." ". $_state );
 		}
 		public function read() {
-			
+			//CHANGE the value inside exec to match 
+			//"          sudo python *filename*              " basically linux command to run python file
+			//to run the pythom file
+			//to read. call this function where u want to start reading
+			//not sure about the dots
 			return exec( "gpio -g read ". $this->get_gpio_pin(), $status);
 			// return $status;
 		}
+		
+		public function endread(){
+			//use control c to stop reading
+			return exec("^c");	
+		}
+		// right now just create a new web page that calls read when we enter it 
+		//and another that stops reading when we enter it
+		//we dont need button atm
 		
 	}
 ?>
